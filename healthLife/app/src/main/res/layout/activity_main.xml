@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="健康信息录入"
+                android:background="#ff0000"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="25sp"/>
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="录入"
+                android:id="@+id/main_add_btn"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/login_btn_back"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="运动数据"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@drawable/line_draw">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="晨跑"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center_vertical"
+                android:text="查询"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:id="@+id/main_morning_btn"
+                android:background="@drawable/login_btn_back"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@drawable/line_draw">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="早操训练"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center_vertical"
+                android:text="查询"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:id="@+id/main_morning_exercise_btn"
+                android:background="@drawable/login_btn_back"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@drawable/line_draw">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="日间行走"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center_vertical"
+                android:text="查询"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:id="@+id/main_walk_btn"
+                android:background="@drawable/login_btn_back"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@drawable/login_btn_back">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="骑行"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center_vertical"
+                android:text="查询"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:id="@+id/main_bike_btn"
+                android:background="@drawable/login_btn_back"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@drawable/line_draw">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="游泳"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center_vertical"
+                android:text="查询"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:id="@+id/main_swim_btn"
+                android:background="@drawable/login_btn_back"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@drawable/line_draw">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="球类运动"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center_vertical"
+                android:text="查询"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:id="@+id/main_ball_btn"
+                android:background="@drawable/login_btn_back"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@drawable/register_btn_back">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="晚间跑步"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center_vertical"
+                android:text="查询"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:id="@+id/main_night_run_btn"
+                android:background="@drawable/login_btn_back"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
