@@ -115,7 +115,7 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
                 map.put("sex",sex);
                 map.put("password",pwdEdit.getText().toString().trim());
                 map.put("birthday", birthBtn.getText().toString().trim());
-                final String result= HttpUtils.doPost("regeist",map);
+                final String result= HttpUtils.doPost("TestSever/register",map);
                 if (result!=null){
                     //运行在主线程
                     runOnUiThread(new Runnable() {

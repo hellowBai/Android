@@ -96,7 +96,7 @@ public class LoginActivity extends BaseActivity implements CompoundButton.OnChec
                 map.put("account",accountEdit.getText().toString().trim());
                 map.put("password",pwdEdit.getText().toString().trim());
                 String face="login.aspx";
-                final String result = HttpUtils.doPost("Http_web/server/test",map);
+                final String result = HttpUtils.doPost("TestSever/login",map);
                 Log.e("tag", "======"+result );
                 //运行在主线程
                 runOnUiThread(new Runnable() {
@@ -111,6 +111,7 @@ public class LoginActivity extends BaseActivity implements CompoundButton.OnChec
                             int code =jsonObject.getInt("code");
                             if (code==0){
                                 startIntent(MainActivity.class);
+                                AppApplication.account=jsonObject.getString("account");
                                 toast("登录成功");
                             }else{
                                 toast(jsonObject.getString("msg"));

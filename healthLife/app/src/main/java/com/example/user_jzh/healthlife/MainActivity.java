@@ -43,7 +43,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.main_add_btn:
-                //Â¼Èë
+                //
                 startIntent(AddActivity.class);
                 break;
             case R.id.main_morning_btn:

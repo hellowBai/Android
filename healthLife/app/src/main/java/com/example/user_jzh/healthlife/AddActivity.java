@@ -2,12 +2,19 @@ package com.example.user_jzh.healthlife;
 
 import android.app.TimePickerDialog;
 import android.os.Bundle;
+import android.util.JsonReader;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TimePicker;
 
 import com.example.user_jzh.healthlife.base.BaseActivity;
+import com.example.user_jzh.healthlife.util.HttpUtils;
+
+import org.json.JSONObject;
+
+import java.util.Calendar;
+import java.util.HashMap;
 
 public class AddActivity  extends BaseActivity implements View.OnClickListener {
     private Button addBtn,cancelBtn,morningStartBtn,morningEndBtn;
@@ -18,6 +25,7 @@ public class AddActivity  extends BaseActivity implements View.OnClickListener {
     private Button swimStartBtn,swimEndBtn;
     private Button ballStartBtn,ballEndBtn;
     private Button nightStartBtn,nightEndBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +76,13 @@ public class AddActivity  extends BaseActivity implements View.OnClickListener {
     public void onClick(final View v) {
         switch (v.getId()){
             case R.id.add_submit_btn:
-                //Ìá½»ÐÅÏ¢
+                //提交信息
+                if(morningStartBtn.getText().toString().toString().trim().matches("[\\u4e00-\\u9fa5]*"))
+                {
+                    toast("请选择开始时间");
+                }else{
+                    toast("请选择结束时间");
+                }
                 break;
             case R.id.add_cancel_btn:
                 //È¡Ïû
@@ -90,6 +104,41 @@ public class AddActivity  extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
+
+    }
+
+    private void inserData(){
+        final Runnable runable=new Runnable() {
+            @Override
+            public void run() {
+                HashMap<String,Object>map=new HashMap<>();
+                Calendar calendar =  Calendar.getInstance();;
+                String today=calendar.get(Calendar.YEAR)+"-"+calendar.get(Calendar.MONTH)+"-"+calendar.get(Calendar.DAY_OF_MONTH)+" ";
+                map.put("sport_name","晨跑");
+                map.put("start_time",morningStartBtn.getText().toString().trim());
+                map.put("start_time",morningEndBtn.getText().toString().trim());
+                map.put("account","123");
+                map.put("distance",mileageEdit.getText().toString().trim());
+                final String result = HttpUtils.doPost("insertSport",map);
+               runOnUiThread(new Runnable() {
+                   @Override
+                   public void run() {
+                     try{
+                         JSONObject jsonReader=new JSONObject(result);
+                        if (jsonReader.getInt("code")==0){
+                            toast("成功");
+                            finish();
+                        }else{
+
+                        }
+                     }
+                           catch (Exception e){
+
+                        }
+                   }
+               });
+            }
+        };
 
     }
 }

@@ -2,6 +2,9 @@ package com.example.user_jzh.healthlife.util;
 
 import com.example.user_jzh.healthlife.base.BaseActivity;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -29,6 +32,11 @@ public class HttpUtils {
                 conn.setDoOutput(true);
                 OutputStream os=conn.getOutputStream();
                 String reqData=param(params);
+             /*   try{
+                JSONObject jsonObject=new JSONObject(reqData);}
+                 catch (JSONException e) {
+                    e.printStackTrace();
+                }*/
                 os.write(reqData.getBytes("utf-8"));
             }
             StringBuffer sb = new StringBuffer();

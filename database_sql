@@ -1,0 +1,22 @@
+CREATE TABLE `sport` (
+  `sid` int(11) NOT NULL AUTO_INCREMENT,
+  `sport_name` varchar(200) COLLATE utf8_bin DEFAULT NULL,
+  `start_time` datetime DEFAULT NULL COMMENT 'CURRENT_TIMESTAMP',
+  `end_time` datetime DEFAULT NULL COMMENT 'CURRENT_TIMESTAMP',
+  `distance` double DEFAULT NULL,
+  `remark` varchar(200) COLLATE utf8_bin DEFAULT NULL,
+  `account` varchar(200) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`sid`)
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `account` varchar(200) COLLATE utf8_bin DEFAULT NULL,
+  `name` varchar(200) COLLATE utf8_bin DEFAULT NULL,
+  `sex` varchar(200) COLLATE utf8_bin DEFAULT NULL,
+  `birthday` date DEFAULT NULL,
+  `password` varchar(200) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `NewIndex1` (`account`)
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
